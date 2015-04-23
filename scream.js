@@ -49,6 +49,7 @@ function timedMoan() {
             }
             time=1000;
         } else {
+            oldPageYOffset = window.pageYOffset;
             time = 15000;
         }
         timedMoan();
