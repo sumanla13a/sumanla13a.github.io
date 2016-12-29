@@ -13,7 +13,7 @@
 					something = true;
 					emptyGrids[key].push(innerKey);
 				}
-				if(usableGrid[key][innerKey] === 4 && !gamewon) {
+				if(usableGrid[key][innerKey] === 2048 && !gamewon) {
 					gamewon = true;
 					window.$('#wonGame').modal();
 				}
