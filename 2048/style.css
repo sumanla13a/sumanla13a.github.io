@@ -1,0 +1,21 @@
+table {
+	width: 500px !important;
+	margin: 0 auto;
+}
+
+table tr {
+	height: 50px !important;
+}
+table td {
+	height: 50px !important;
+	width: 50px !important;
+}
+
+#game div {
+    border: 10px solid #dfdfdf;
+    height: 125px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    font-size: 32px;
+}
