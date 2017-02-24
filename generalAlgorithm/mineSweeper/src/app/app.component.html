@@ -1,0 +1,62 @@
+<div class="game">
+	<div class="alert alert-success fade in" *ngIf="gameComplete">
+	  <strong>Success!</strong> You Won
+	</div>
+	<div class="alert alert-danger fade in" *ngIf="gameOver">
+	  <strong>Success!</strong> You Died
+	</div>
+	<h2>Sweep the Mines</h2>
+	<div>
+		<div class="form-check">
+		  <label class="form-check-label">
+		    <input class="form-check-input" type="radio" name="short" id="short" value="easy" [(ngModel)]="difficulty" checked>
+		    Just a quickie
+		  </label>
+		</div>
+		<div class="form-check">
+		  <label class="form-check-label">
+		    <input class="form-check-input" type="radio" name="medium" id="medium" value="medium" [(ngModel)]="difficulty">
+		    I have time
+		  </label>
+		</div>
+		<div class="form-check disabled">
+		  <label class="form-check-label">
+		    <input class="form-check-input" type="radio" name="long" id="long" value="hard" [(ngModel)]="difficulty">
+		    I am bored
+		  </label>
+		</div>
+	</div>
+	<div (click)="startNewGame()">
+		<button class="btn btn-primary"> New Game </button>
+	</div>
+	<div *ngIf="isGameStarted">
+		<p>
+			<span>
+				<strong>Size:</strong> {{game.rows}} X {{game.columns}}
+			</span>
+			<span class="pull-right">
+				Number of Bombs: {{game.bombs}}
+			</span>
+		</p>
+		<table class="table table-bordered">
+			<tbody>
+				<tr *ngFor="let row of game.board; let indexRow = index ">
+					<td [ngClass]="!game.board[indexRow][indexColumn].isRevealed? 'gray': ''"
+						 *ngFor="let column of row; let indexColumn = index;"
+						 (click) = "reveal(game.board[indexRow][indexColumn])"
+						 (contextmenu) = "tagAsBomb(game.board[indexRow][indexColumn], $event)">
+						  <span *ngIf="game.board[indexRow][indexColumn].isRevealed">
+						  	{{game.board[indexRow][indexColumn].isBomb ? '*' : game.board[indexRow][indexColumn].bombCount > 0 ? game.board[indexRow][indexColumn].bombCount : ''}}
+						  </span>
+						  <span *ngIf="!game.board[indexRow][indexColumn].isRevealed">
+						  	&nbsp;
+						  	<span *ngIf="game.board[indexRow][indexColumn].flagBomb">
+						  		B
+						  	</span>
+				  		  </span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

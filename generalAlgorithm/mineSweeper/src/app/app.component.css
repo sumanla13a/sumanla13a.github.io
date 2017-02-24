@@ -1,0 +1,13 @@
+.game {
+	width: 25%;
+	margin: 0 5%;
+}
+
+table td{
+	border: 1 solid #dfdfdf;
+	min-width: 50px;
+}
+
+.gray {
+	background-color: gray;
+}
