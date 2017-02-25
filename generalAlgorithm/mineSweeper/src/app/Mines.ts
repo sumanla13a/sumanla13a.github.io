@@ -60,11 +60,17 @@ export class Mines {
 	}
 
 	generateBombs() {
-		for(let i = 0; i < this.bombs; i++) {
+		let bombPos = 0;
+		while(bombPos < this.bombs) {
 			let ran1 = Math.floor(Math.random() * this.rows);
 			let ran2 = Math.floor(Math.random() * this.columns);
-			this.board[ran1][ran2] = new Position(ran1, ran2);
-			this.board[ran1][ran2].setBomb(true);
+			if(!this.board[ran1][ran2].isBomb) {
+				bombPos ++;
+				this.board[ran1][ran2] = new Position(ran1, ran2);
+				this.board[ran1][ran2].setBomb(true);
+			}
+		}
+		for(let i = 0; i < this.bombs; i++) {
 		}
 	}
 
@@ -156,8 +162,8 @@ export class Mines {
 	revealAllConnectedZero(position) {
 		this.getAllNeighbors(position).forEach(pos => {
 	  		if(!pos.isRevealed) {
+	  			pos.setRevealed(true);
 		  		if(!pos.isBomb && pos.bombCount === 0) {
-		  			pos.setRevealed(true);
 		  			this.revealAllConnectedZero(pos);
 		  		}
 	  		}
