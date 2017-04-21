@@ -1,0 +1,19 @@
+.row {
+  width: 100%;
+  float: left;
+}
+
+.row:after {
+  clear: both;
+}
+.has-moles {
+
+  background-color: #dfdfdf;
+}
+
+.grid {
+    width: 25px;
+  height: 25px;
+  display: inline-block;
+  border: 1px solid red;
+}
