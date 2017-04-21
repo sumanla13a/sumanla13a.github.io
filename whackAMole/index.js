@@ -47,7 +47,6 @@
   	let that = this;
   	$('#whack-mole').on('click', '.grid', function() {
     	let index = $(this).data().index;
-      console.log(that.didPlayerWin());
       if(that.moles[$(this).data().index]) {
       	that.moles[$(this).data().index] = false;
         $(this).removeClass('has-moles');
@@ -55,12 +54,14 @@
       }
       if(that.didPlayerWin()) {
         alert('you win');
-      } else {
       	clearInterval(that.timer);
+        delete that.timer;
       }
-      if(!this.timer) {
+
+      if(!that.timer) {
       	that.timer = setInterval(() => {
-        	new Game();	
+        	new Game();
+          clearInterval(that.timer);
       	}, 5000);
       }
       
