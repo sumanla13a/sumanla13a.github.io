@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Arial-BoldMT;
+    src: url(../fonts/arial-boldmt-opentype.otf);
+}
+
+@font-face {
+    font-family: Arial-MT;
+    src: url(../fonts/ARI.ttf);
+}
+
+@font-face {
+	font-family: Georgia;
+	src: url(../fonts/Georgia-Regular-font.ttf);
+}

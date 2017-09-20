@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>
+			Task Tracker v2.0
+		</title>
+		<link rel="stylesheet" href="./css/fonts.css">
+		<link rel="stylesheet" href="./css/index.css">
+	</head>
+	<body class="container">
+		<header>
+			<h1>
+				Task Tracker
+			</h1>
+			<p>
+				v2.0
+			</p>
+		</header>
+		<section >
+			<div class="pull-left contents form-control">
+				
+				<h3>Create a Task</h3>
+				<form action="" class="form-group" id="task-form">
+					<div class="form-elem">
+						<span class="label">Task Name</span>
+						<input type="text" id="task-name" required/>
+					</div>
+					<div class="form-elem">
+						<span class="label">Date</span>
+						<input type="text" id="task-date" required/>
+					</div>
+					<div class="form-elem">
+						<span class="label">Assigned To</span>
+						<input type="text" id="task-assignedTo" required/>
+					</div>
+					<div class="form-elem">
+						<button id="task-submit">
+							Submit
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="pull-left contents">
+				<h3> Existing Task </h3>
+				<div class="tabulate"  id="task-recorded">
+					<div class="table-row" style="display: none">
+						<div class="column task-name">
+							<span></span>
+						</div>
+						<div class="column task-date">
+							<span></span>
+							
+						</div>
+						<div class="column task-assigned">
+							<span></span>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</section>
+
+		<script src="./js/jquery-3.2.1.min.js"></script>
+		<script src="./js/index.js"> </script>
+
+	</body>
+</html>
