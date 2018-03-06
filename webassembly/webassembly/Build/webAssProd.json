@@ -1,0 +1,13 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "webAssProd.data.unityweb",
+"wasmCodeUrl": "webAssProd.wasm.code.unityweb",
+"wasmFrameworkUrl": "webAssProd.wasm.framework.unityweb",
+"asmCodeUrl": "webAssProd.asm.code.unityweb",
+"asmMemoryUrl": "webAssProd.asm.memory.unityweb",
+"asmFrameworkUrl": "webAssProd.asm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
