@@ -1,0 +1,200 @@
+:root {
+    --ear-width: 100px;
+    --head-width: 388px;
+    --head-top-width: 364px;
+    --head-bottom-height: 178px;
+    --head-height: 382px;
+}
+
+#container {
+    margin: auto;
+    top: 100px;
+    min-width: 768px;;
+}
+
+#pikachu {
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+    width: fit-content;
+}
+
+/* #region ear */
+pikachu-ear {
+    background-image: linear-gradient(to right, #F2DD6A, #C1B083);
+    width: var(--ear-width);
+    height: 325px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50% 50% 40% 40% / 50% 50% 50% 50%;
+}
+
+pikachu-ear::before {
+    content: '';
+    height: 280px;
+    background-image: linear-gradient(to right, #86847F, #35342F);
+    width: 225px;
+    position: absolute;
+    transform: rotate(15deg);
+    top: -125px;
+    left: -120px;
+    border-radius: 140px;
+}
+
+.left-ear {
+    transform: rotate(-15deg);
+    top: -100px;
+    left: 100px;
+}
+
+.right-ear {
+    transform: rotate(70deg);
+    top: 0px;
+    left: 45px;
+    z-index: -1;
+}
+
+/* #endregion */
+
+
+pikachu-head {
+    background-image: radial-gradient(#DBC87C, #DBC87C);
+    width: var(--head-top-width);
+    height: var(--head-height);
+    border-radius: 30% 30% 20% 20% / 50% 50% 50% 50%;
+    display: inline-block;
+    position: relative;
+    top:-50px;
+}
+
+pikachu-head::after {
+    content: '';
+    background-image: radial-gradient(#DBC87C, #DBC87C);;
+    width: var(--head-width);
+    height: var(--head-bottom-height);
+    border-radius: 10% 10% 35% 35% / 50% 50% 100% 100%;
+    
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    transform: translateX(-5px);
+    z-index: -1;
+}
+
+pikachu-face {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+pikachu-eye {
+    width:65px;
+    height: 76px;
+    display: inline-block;
+    border: 3px solid #413316;
+    border-radius: 50% 40% / 50%;
+    background-image: linear-gradient(to right, #37372B, #7E776D);
+    position: relative;
+    top: 128px;
+    box-shadow: 1px 1.5px;
+}
+
+pikachu-eye::before {
+    content: '';
+    width: 28px;
+    height: 28px;
+    border-radius: 45px;
+    position: absolute;
+    top: 10px;
+    background-color: white;
+}
+
+pikachu-eye.left-eye {
+    left: 42px;
+}
+
+pikachu-eye.left-eye::before {
+    left: 26px;
+}
+
+pikachu-eye.right-eye {
+    left: 170px;
+}
+
+pikachu-eye.right-eye::before {
+    left: 10px;
+}
+
+pikachu-nose {
+    height: 16px;
+    display: inline-block;
+    width: 25px;
+    position: relative;
+    top: 150px;
+    left: 10px;
+    background-image: radial-gradient(#ffffff 5%, #4A3323 40%);
+    border-radius: 70% 70% 75% 75% / 50% 50% 100% 100%;
+}
+
+pikachu-cheek-spot {
+    height: 94px;
+    width: 63px;
+    border: 2.5px solid #944912;
+    display: inline-block;
+    position: relative;
+    border-radius: 75% 25% / 50%;
+    top: 250px;
+}
+
+pikachu-cheek-spot.left {
+    left: -180px;
+    transform: rotateY(40deg) rotateX(17deg);
+    background-image: linear-gradient(to left, #CA563F, #D89686);
+}
+
+pikachu-cheek-spot.right {
+    transform: rotateY(45deg) rotateX(-16deg);
+    left: 45px;
+    background-image: linear-gradient(to left, #D89686, #CA563F);
+}
+
+pikachu-mouth {
+    position: relative;
+}
+
+pikachu-mouth::before {
+    content: ' ';
+    width: 62px;
+    display: inline-block;
+    height: 18px;
+    border-bottom: 2px solid #824A11;
+    position: absolute;
+    top: 165px;
+    right: 147px;
+    border-radius: 100%;
+}
+
+pikachu-mouth::after {
+    content: ' ';
+    width: 62px;
+    display: inline-block;
+    height: 18px;
+    border-bottom: 2px solid #824A11;
+    position: absolute;
+    top: 165px;
+    right: 85px;
+    border-radius: 100%;
+}
+
+pikachu-tongue {
+    position: relative;
+    width: 90px;
+    height: 74px;
+    top: 165px;
+    border: 2px solid #824A11;
+    left: 124px;
+    display: block;
+    border-top: none;
+    border-radius: 0% 0% 50% 50% / 0% 0% 100% 100%;
+    background-image: radial-gradient(ellipse at 50%, #A85438 -2%, #D27F7B 66%, #B35357 78%);
+}
